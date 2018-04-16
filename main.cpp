@@ -18,8 +18,8 @@ void consumer() {
         int a = q.front();
         cout << "pulling " << q.front() << endl;
         q.pop();
+        locker.unlock();
         if (a == 5) break;
-
     }
     cout << "done" << endl;
 }
